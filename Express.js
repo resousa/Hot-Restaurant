@@ -10,7 +10,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
-
 let customers = [
   {
     routeName: 'yodagreen',
@@ -35,13 +34,15 @@ let customers = [
   }
 ];
 
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'view.html')));
+app.get('/reserve', (req, res) => res.sendFile(path.join(__dirname, 'reserve.html')));
 
-app.get('/add', (req, res) => res.sendFile(path.join(__dirname, 'add.html')));
+app.get('/tables', (req, res) => res.sendFile(path.join(__dirname, 'tables.html')));
 
-app.get('/api/customers', (req, res) => res.json(customers));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'home.html')));
 
-app.get('/api/customers/:customer', (req, res) => {
+app.get('/api/tables', (req, res) => res.json(customers));
+
+app.get('/api/tables/:customer', (req, res) => {
   const chosen = req.params.customer;
 
   console.log(chosen);
@@ -55,7 +56,7 @@ app.get('/api/customers/:customer', (req, res) => {
   return res.json(false);
 });
 
-app.post('/api/customers', (req, res) => {
+app.post('/api/tables', (req, res) => {
 
     const newCustomer = req.body;
   
