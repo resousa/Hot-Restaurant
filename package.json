@@ -1,0 +1,19 @@
+{
+  "name": "hot-restaurant",
+  "version": "1.0.0",
+  "description": "project",
+  "main": "Express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/resousa/Hot-Restaurant.git"
+  },
+  "author": "team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/resousa/Hot-Restaurant/issues"
+  },
+  "homepage": "https://github.com/resousa/Hot-Restaurant#readme"
+}
